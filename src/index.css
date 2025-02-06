@@ -1,0 +1,248 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Main App Container */
+.app {
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   justify-content: center;
+   text-align: center;
+   padding: 50px;
+   background: linear-gradient(rgb(0, 91, 219) ,skyblue);
+   height: 100%;
+
+}
+
+/* Left (Weather Background) */
+.left_inner {
+  border-top-left-radius: 10px ;
+  border-top-right-radius: 10px ;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  color: rgb(63, 144, 235);
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease-in-out;
+
+}
+
+/* City & Country */
+.top_right {
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  text-align: center;
+}
+
+/* Weather Details */
+.left_inner .bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  text-align: center;
+}
+
+.left_inner h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Right Panel */
+.right_inner {
+  height: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-bottom-left-radius: 10px ;
+  border-bottom-right-radius: 10px ;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input {
+  width: 80%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.search-button {
+  padding: 12px;
+  border: none;
+  background: #ff7b54;
+  color: white;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background: #ff5a36;
+}
+
+/* Weather Info */
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-description {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.weather-detail {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+
+.weather-item {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+
+}
+
+.weather-info-inner{
+  display: flex;
+  gap: 10px;
+}
+
+.weather-item p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.weather-item p:last-child {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffcc00;
+}
+
+
+.icon {
+  color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .right_inner {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+  }
+
+  .left_inner, .right_inner {
+    width: 100%;
+    height: 50%;
+    border-radius: 0;
+  }
+  
+  .right_inner {
+    padding: 20px;
+    padding-bottom: 100px;
+  }
+  .weather-info-inner{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Hide scrollbar */
+.weather-info {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.weather-info::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+/* Dark Scrollbar */
+.weather-info::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Dark background */
+  border-radius: 8px;
+}
+
+.weather-info::-webkit-scrollbar-thumb {
+  background: #444; /* Darker thumb */
+  border-radius: 8px;
+}
+
+.weather-info::-webkit-scrollbar-thumb:hover {
+  background: #666; /* Lighter on hover */
+}
+
